@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Kings Seeds</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAllowsLocalNetworking</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>UIUserInterfaceStyle</key>
+		<string>Light</string>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>YOUR TEXT1</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>YOUR TEXT2</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>YOUR TEXT3</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>The App requires calendar permission to manage appointments</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The App requires camera permission to take photos of the stores you visit</string>
+	<key>NSContactsUsageDescription</key>
+	<string>YOUR TEXT6</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>YOUR TEXT</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>YOUR TEXT</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>YOUR TEXT</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The App requires microphone permission to call store contacts</string>
+	<key>NSMotionUsageDescription</key>
+	<string>YOUR TEXT9</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Kingsseeds would like to save photos from the app to your gallery</string>
+	<key>NSPhotoLibraryUsageDecription</key>
+	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Kingsseeds would like to access your photo gallery for uploading images to the app</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>YOUR TEXT</string>
+	<key>NSSiriUsageDescription</key>
+	<string>YOUR TEXT11</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>YOUR TEXT12</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+ 		<string>The App requires location permission to show stores near your location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen.storyboard</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

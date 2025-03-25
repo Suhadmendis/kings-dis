@@ -1,0 +1,188 @@
+{
+    "IsSKUAvailableForSale": true,
+    "IsOrderingDisabled": false,
+    "SKUDescription": "",
+    "PriceDisplay": "£4.45 - £33.38",
+    "PriceOptions": {
+        "Price1": {
+            "Label": "50 Seeds",
+            "Price": "£4.45"
+        },
+        "Price2": {
+            "Label": "100 Seeds",
+            "Price": "£7.79"
+        },
+        "Price3": {
+            "Label": "150 Seeds",
+            "Price": "£11.79"
+        },
+        "Price4": {
+            "Label": "200 Seeds",
+            "Price": "£15.13"
+        },
+        "Price5": {
+            "Label": "250 Seeds",
+            "Price": "£17.80"
+        },
+        "Price6": {
+            "Label": "300 Seeds",
+            "Price": "£21.14"
+        },
+        "Price7": {
+            "Label": "350 Seeds",
+            "Price": "£24.25"
+        },
+        "Price8": {
+            "Label": "400 Seeds",
+            "Price": "£27.15"
+        },
+        "Price9": {
+            "Label": "450 Seeds",
+            "Price": "£30.04"
+        },
+        "Price10": {
+            "Label": "500 Seeds",
+            "Price": "£33.38"
+        }
+    },
+    "SKUFeatures": "",
+    "BeeLogo": "",
+    "ImagesMain": [
+        {
+            "ImageID": "image",
+            "ImageNumber": "MEL 04",
+            "ImagePath": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png?ext=.png",
+            "SKUName": "MELON  Ogen"
+        }
+    ],
+    "ImagesThumb": [],
+    "RelatedProducts": [
+        {
+            "Id": 29329,
+            "SkuId": 9859,
+            "Name": "ALFALFA ORGANICALLY GROWN GB-ORG-05 P5847  EU PLANT PASSPORT GB40557",
+            "Code": "OVSAC 014",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/ALFALFA-ORGANICALLY-GROWN-GB-ORG-05-P5847-EU-PLANT-PASSPORT-GB40557",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£5.60 - £42.00"
+        },
+        {
+            "Id": 29402,
+            "SkuId": 11720,
+            "Name": "Alfalfa Plant Passport A.Medicago sativa B.GB40557 C.Lot no below D.GB",
+            "Code": "SAC 08",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/Alfalfa-Plant-Passport-AMedicago-sativa-BGB40557-CLot-no-below-DGB",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£5.00 - £37.50"
+        },
+        {
+            "Id": 29227,
+            "SkuId": 11798,
+            "Name": "Amaranth Red Army",
+            "Code": "ORI 070",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/Amaranth-Red-Army",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£3.25 - £24.58"
+        },
+        {
+            "Id": 28768,
+            "SkuId": 12193,
+            "Name": "ARTICHOKE  Green Globe",
+            "Code": "ART 01",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/ARTICHOKE-Green-Globe",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£2.80 - £21.00"
+        },
+        {
+            "Id": 28770,
+            "SkuId": 12195,
+            "Name": "ARTICHOKE  Romanesco",
+            "Code": "ART 04",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/ARTICHOKE-Romanesco",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£3.50 - £26.25"
+        },
+        {
+            "Id": 28769,
+            "SkuId": 12194,
+            "Name": "ARTICHOKE  Violetto di Chiogga",
+            "Code": "ART 03",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/ARTICHOKE-Violetto-di-Chiogga",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£3.50 - £26.25"
+        },
+        {
+            "Id": 28772,
+            "SkuId": 10530,
+            "Name": "ASPARAGUS  Ariane F1",
+            "Code": "ASP 010",
+            "PackSize": "",
+            "URL": "/Products/Vegetables/Veg-Seed/ASPARAGUS-Ariane-F1",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£9.80 - £60.76"
+        },
+        {
+            "Id": 28771,
+            "SkuId": 12197,
+            "Name": "ASPARAGUS  Connovers Colossal",
+            "Code": "ASP 01",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/ASPARAGUS-Connovers-Colossal",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£3.75 - £28.13"
+        },
+        {
+            "Id": 28773,
+            "SkuId": 12198,
+            "Name": "ASPARAGUS  Mary Washington",
+            "Code": "ASP 02",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/ASPARAGUS-Mary-Washington",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£3.55 - £26.63"
+        },
+        {
+            "Id": 29387,
+            "SkuId": 11710,
+            "Name": "Asparagus Pea",
+            "Code": "SAC 01",
+            "PackSize": "Pack: 1",
+            "URL": "/Products/Vegetables/Veg-Seed/Asparagus-Pea",
+            "ImageURL": "https://dev1.kingsseeds.com/kings/media/images/common/no-image.png",
+            "Description": null,
+            "Availability": true,
+            "Price": "£3.85 - £28.88"
+        }
+    ],
+    "AlsoBoughtProducts": [],
+    "PropagationData": {
+        "Sow": "",
+        "Plant": "",
+        "Harvest": "",
+        "Notes": ""
+    }
+}

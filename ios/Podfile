@@ -1,0 +1,129 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '15.5'
+prepare_react_native_project!
+
+# If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
+# because `react-native-flipper` depends on (FlipperKit,...) that will be excluded
+#
+# To fix this you can also exclude `react-native-flipper` using a `react-native.config.js`
+# ```js
+# module.exports = {
+#   dependencies: {
+#     ...(process.env.NO_FLIPPER ? { 'react-native-flipper': { platforms: { ios: null } } } : {}),
+# ```
+flipper_config = ENV['NO_FLIPPER'] == "1" ? FlipperConfiguration.disabled : FlipperConfiguration.enabled
+
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
+
+target 'kingsseeds' do
+  config = use_native_modules!
+
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  rn_maps_path = '../node_modules/react-native-maps'
+
+  pod 'Permission-AppTrackingTransparency', :path => "#{permissions_path}/AppTrackingTransparency"
+  pod 'Permission-BluetoothPeripheral', :path => "#{permissions_path}/BluetoothPeripheral"
+  pod 'Permission-Calendars', :path => "#{permissions_path}/Calendars"
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+  pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
+  pod 'Permission-FaceID', :path => "#{permissions_path}/FaceID"
+  pod 'Permission-LocationAccuracy', :path => "#{permissions_path}/LocationAccuracy"
+  pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways"
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+  pod 'Permission-MediaLibrary', :path => "#{permissions_path}/MediaLibrary"
+  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
+  pod 'Permission-Motion', :path => "#{permissions_path}/Motion"
+  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+  pod 'Permission-PhotoLibraryAddOnly', :path => "#{permissions_path}/PhotoLibraryAddOnly"
+  pod 'Permission-Reminders', :path => "#{permissions_path}/Reminders"
+  pod 'Permission-Siri', :path => "#{permissions_path}/Siri"
+  pod 'Permission-SpeechRecognition', :path => "#{permissions_path}/SpeechRecognition"
+  pod 'Permission-StoreKit', :path => "#{permissions_path}/StoreKit"
+
+
+  # pod 'react-native-google-maps', :path => rn_maps_path
+
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+
+
+#   # React Native Maps dependencies
+# # The following line is only needed if building on an Apple silicon Mac without rosetta.
+# pod 'Google-Maps-iOS-Utils', :git => 'https://github.com/Simon-TechForm/google-maps-ios-utils.git', :branch => 'feat/support-apple-silicon'
+
+rn_maps_path = '../node_modules/react-native-maps'
+pod 'react-native-google-maps', :path => rn_maps_path
+   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'RNFS', :path => '../node_modules/react-native-fs'
+
+
+  # pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
+  pod 'react-native-idle-timer', :path => '../node_modules/react-native-idle-timer'
+
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
+
+  pod 'ReactNativeExceptionHandler', :path => '../node_modules/react-native-exception-handler'
+  # Flags change depending on the env values.
+  flags = get_default_flags()
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # Hermes is now enabled by default. Disable by setting this flag to false.
+    # Upcoming versions of React Native may rely on get_default_flags(), but
+    # we make it explicit here to aid in the React Native upgrade process.
+    :hermes_enabled => flags[:hermes_enabled],
+    :fabric_enabled => flags[:fabric_enabled],
+    # Enables Flipper.
+    #
+    # Note that if you have use_frameworks! enabled, Flipper will not work and
+    # you should disable the next line.
+    # :flipper_configuration => flipper_config,
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  target 'kingsseedsTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+
+  post_install do |installer|
+
+
+
+
+    bitcode_strip_path = `xcrun --find bitcode_strip`.chop!
+      def strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
+        framework_path = File.join(Dir.pwd, framework_relative_path)
+        command = "#{bitcode_strip_path} #{framework_path} -r -o #{framework_path}"
+        puts "Stripping bitcode: #{command}"
+        system(command)
+      end
+
+      framework_paths = [
+        "Pods/LogRocket/LogRocket.xcframework/ios-arm64/LogRocket.framework/LogRocket",
+        "Pods/hermes-engine/destroot/Library/Frameworks/macosx/hermes.framework/hermes",
+        "Pods/hermes-engine/destroot/Library/Frameworks/macosx/hermes.framework/Versions/Current/hermes",
+        "Pods/hermes-engine/destroot/Library/Frameworks/universal/hermes.xcframework/ios-arm64/hermes.framework/hermes",
+        "Pods/hermes-engine/destroot/Library/Frameworks/universal/hermes.xcframework/ios-arm64_x86_64-maccatalyst/hermes.framework/hermes"
+      ]
+
+      framework_paths.each do |framework_relative_path|
+        strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
+      end
+end
+end
+
+
+
