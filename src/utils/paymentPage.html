@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <script src="https://pi-test.sagepay.com/api/v1/js/sagepay.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+        body {
+            background-color: #F7FFF5;
+        }
+
+        body * {
+            font-family: sans-serif;
+            /*max-width: 700px;*/
+            max-width: 550px;
+            margin: 0px auto;
+            float: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {}
+
+        h2 {
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #1ed18c;
+        }
+
+        input {
+            font-size: 12pt;
+        }
+
+        #main {
+            width: 550px;
+            margin: 0 auto;
+        }
+
+        #submit-container {
+            padding-top: 10px;
+            float: right;
+            width: 100%;
+        }
+
+        button[type=submit] {
+            border: none;
+            background: #1ED18C;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px 25px;
+            cursor: pointer;
+            float: right;
+            text-transform: uppercase;
+            box-shadow: 0px 3px 6px #BEFFF5;
+        }
+
+        #payment-iframe {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #cardForm {
+            background-color: rgba(255, 255, 255, 1.7);
+            padding: 25px 25px 80px 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px #e7e7e7;
+            margin-top: 25vh;
+        }
+
+        #submit-container span {
+            border: 1px solid #B2F1A7;
+            border-radius: 5px;
+            padding: 7px 5px 0px 5px;
+            display: inline-block;
+            max-width: 66px;
+            text-align: center;
+            background: #fbfffd;
+           
+        }
+
+        #submit-container span img {
+            width: 90%;
+        }
+
+
+        @media screen and (max-width: 420px) {
+
+            button[type=submit] {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            #cardForm {
+                padding: 25px 25px 140px 25px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form id="cardForm" name="cardForm" action="https://sop.kingsseeds.com/api_dev/payment" method="POST" style="position: relative;">
+            <h2>Enter Card Details</h2>
+            <div id="sp-container"></div>
+            <div id="submit-container">
+                <span><img src="https://www.kingsseeds.com/kings/media/images/payments/sage_pay.png" alt=""></span>
+                <span><img src="https://www.kingsseeds.com/kings/media/images/payments/master_card.png" alt=""></span>
+                <span><img src="https://www.kingsseeds.com/kings/media/images/payments/verified_visa.png" alt=""></span>
+              
+            </div>
+            
+            <input name="card-identifier" id="card-identifier" hidden />
+            <input name="msk" id="msk" value="@id" hidden />
+            <input name="orderID" id="orderID" value="@orderID" hidden />
+            <input name="orderBillingAddressID" id="orderBillingAddressID" value="@orderBillingAddressID" hidden />
+            <input name="3D" id="3D" value="3D" hidden />
+        </form>
+        <div style="align-items: center;justify-content: center;width: 100%;display: flex;margin-top: 10%;">
+            <button type="submit" >Make Payment</button>
+        </div>
+        
+    </main>
+    <script>
+        sagepayCheckout({
+            merchantSessionKey: 'A5DE2CB0-9EDF-40F2-B05C-F9E7A16CB61E',
+            onTokenise: function (tokenisationResult) {
+                if (tokenisationResult.success) {
+                    document.getElementById("card-identifier").value = tokenisationResult.cardIdentifier;
+                    document.cardForm.submit();
+                    //$('#card-identifier').val(tokenisationResult.cardIdentifier);
+                    //$('#cardForm').submit();
+
+                } else {
+                    console.error(tokenisationResult.error.errorMessage);
+                    alert(JSON.stringify(tokenisationResult));
+                }
+            }
+        }).form();
+
+    </script>
+</body>
+
+</html>

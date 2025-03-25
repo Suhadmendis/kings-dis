@@ -1,0 +1,30 @@
+{
+ "txtArray": [
+  {
+   "name": "- Gear Pumps",
+   "itemName": "other-products/tube-fittings",
+   "subName": "Hydraulic Pumps"
+  },
+  {
+   "name": "- Piston Pumps",
+   "itemName": "other-products/swaging-equipment",
+   "subName": "Hydraulic Motors"
+  },
+  {
+   "name": "- Vane Pumps",
+   "itemName": "other-products/steering-units-and-non-standard",
+   "subName": "Other Products"
+  },
+  {
+   "name": "- Piston Pump Build System",
+   "itemName": "other-products/powerpack-comps",
+   "subName": "Hydraulic Pumps"
+  },
+  {
+   "name": "- Gear Pumps Build System",
+   "itemName": "other-products/o-rings-bonded-seals-plastic",
+   "subName": "Hydraulic Motors"
+  }
+ ],
+ "itemArray": []
+}
