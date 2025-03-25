@@ -1,0 +1,13 @@
+{
+  "DefaultCultureCode": "en-GB",
+  "APIMode": "dev",
+  "dev": {
+    "APIBase_URL": "https://sop.kingsseeds.com/api_dev/"
+  },
+  "live": {
+    "APIBase_URL": "https://sop.kingsseeds.com/api_live/"
+  },
+  "test": {
+    "APIBase_URL": "https://sop.kingsseeds.com/api_test/"
+  }
+}
